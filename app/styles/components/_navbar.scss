@@ -1,0 +1,22 @@
+.navbar{
+  background-color: #333;
+
+  .navbar-menu ul{
+    list-style-type: none;
+  }
+  .navbar-menu ul li{
+    display: inline-block;
+    padding: 5px 15px;
+  }
+  .navbar-menu ul li a{
+    color: #f2f2f2;
+  }
+  .navbar-menu .menu-logo{
+    font-size: 1.5rem;
+    color: #fff;
+    img{
+      width: 40px;
+      height:40px;
+    }
+  }
+}

@@ -1,1 +1,1 @@
-React Timer application.
+Simple bikes app for credR.

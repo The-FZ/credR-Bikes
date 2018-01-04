@@ -1,27 +1,30 @@
 const path = require('path');
-var webpack = require('webpack');
 
 module.exports = {
   entry:[
-    'script-loader!jquery/dist/jquery.min.js',
-    'script-loader!foundation-sites/dist/js/foundation.min.js',
     './app/app.js'],
-  externals:{
-    jquery:'jQuery',
-  },
-  plugins:[
-    new webpack.ProvidePlugin({
-      '$':'jquery',
-      'jQuery':'jquery'
-    })
-  ],
   output:{
     path:__dirname,
     filename:'./public/bundle.js'
   },
   resolve:{
     alias:{
-      Main:path.resolve(__dirname,'./app/components/Main.js'),
+      CredRmain:path.resolve(__dirname,'./app/components/CredRmain.js'),
+      Loading:path.resolve(__dirname,'./app/components/Loading.js'),
+      Navbar:path.resolve(__dirname,'./app/components/Navbar.js'),
+      BikeList:path.resolve(__dirname,'./app/components/BikeList.js'),
+      BikeListItem:path.resolve(__dirname,'./app/components/BikeListItem.js'),
+      Avatar:path.resolve(__dirname,'./app/components/Avatar.js'),
+      Stats:path.resolve(__dirname,'./app/components/Stats.js'),
+      Name:path.resolve(__dirname,'./app/components/Name.js'),
+      Registration:path.resolve(__dirname,'./app/components/Registration.js'),
+      MfgYear:path.resolve(__dirname,'./app/components/MfgYear.js'),
+      Age:path.resolve(__dirname,'./app/components/Age.js'),
+      DistanceDriven:path.resolve(__dirname,'./app/components/DistanceDriven.js'),
+      Price:path.resolve(__dirname,'./app/components/Price.js'),
+      Maps:path.resolve(__dirname,'./app/components/Maps.js'),
+      RenderMaps:path.resolve(__dirname,'./app/components/RenderMaps.js'),
+      About:path.resolve(__dirname,'./app/components/About.js'),
       applicationStyles:path.resolve(__dirname,'./app/styles/app.scss')
     },
     extensions:[' ', '.js', '.jsx', '.css', '.scss']
@@ -37,6 +40,5 @@ module.exports = {
         exclude:/(node_modules|bower_components)/
       }
     ]
-
   }
 };
