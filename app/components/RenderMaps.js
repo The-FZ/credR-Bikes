@@ -4,20 +4,23 @@ var { withScriptjs,withGoogleMap, GoogleMap, Marker} = require('react-google-map
 
 var RenderMaps = (props) =>{
     var renderMarkers=()=>{
-      if(props.markers.length===2){
-        var marks = [];
+      if(props.markers.length>0){
+        var marks =[];
         props.markers.forEach((marker,index)=>{
-          marks.push(<Marker key={index} position={marker.coords}/>)
+          console.log(index);
+          marks.push(<Marker key={index} position={marker.coords}/>);
         })
-        return marks;
       }
+      return marks;
     };
 
     return (
       <GoogleMap
       defaultZoom={props.zoom}
       defaultCenter={props.center}>
+
       {renderMarkers()}
+
       </GoogleMap>
   );
 }
